@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'figaro'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
