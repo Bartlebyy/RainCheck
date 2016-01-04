@@ -4,10 +4,6 @@ class Wunderground
 
   attr_reader :zipcode
 
-  def self.[] zipcode
-    new(zipcode)
-  end
-
   def initialize zipcode
     @zipcode = zipcode
   end
@@ -48,5 +44,4 @@ class Wunderground
       (military_hour - 12).to_s
     end
   end
-
 end

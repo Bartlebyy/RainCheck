@@ -1,2 +1,7 @@
-%h1 StaticPages#home
-%p Find me in app/views/static_pages/home.html.haml
+- params.merge!({ From: "11234567890", Body: "30306" }) #for testing purposes
+
+- if params[:From]
+  - twiml = Twilio::TwiML::Response.new do |r|
+    =r.Message Text.new(params[:From], params[:body]).run
+- else
+  Thanks for visiting us online! Buh-bye now!

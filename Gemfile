@@ -9,8 +9,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'pg'
 gem 'rails', '4.0.7'
 gem 'sass-rails', '~> 4.0.2'
+gem 'sidekiq'
 gem 'sdoc', group: :doc
 gem 'uglifier', '>= 1.3.0'
+gem 'twilio-ruby'
 
 group :production do
   gem 'rails_12factor'

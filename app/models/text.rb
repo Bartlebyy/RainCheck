@@ -1,12 +1,9 @@
 class Text
   attr_reader :phone_number, :text
 
-  def self.[] params
-    new(params[:From], params[:Body])
-  end
-
   def initialize phone_number, text
-    @phone_number, @text = phone_number, text
+    @phone_number = phone_number
+    @text = text
   end
 
   def run
@@ -22,6 +19,6 @@ class Text
   end
 
   def weather_data
-    Wunderground[text].generate_hourly_forecast
+    Wunderground.new(text).generate_hourly_forecast
   end
 end
