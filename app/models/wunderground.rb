@@ -12,11 +12,13 @@ class Wunderground
     report(hourly_data)
   end
 
+  private
+
   def hourly_data
-    open("http://api.wunderground.com/api/#{ ENV['WUNDERGROUND_KEY'] }/hourly/q/#{ zipcode }.json") do |f|
-      json_string = f.read
-      hourly_forecast = JSON.parse(json_string)['hourly_forecast']
-    end
+    @data ||= open("http://api.wunderground.com/api/#{ ENV['WUNDERGROUND_KEY'] }/hourly/q/#{ zipcode }.json") do |f|
+                json_string = f.read
+                hourly_forecast = JSON.parse(json_string)['hourly_forecast']
+              end
   end
 
   def report hourly_forecast, num_of_hours = 12

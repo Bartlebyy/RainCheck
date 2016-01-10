@@ -13,6 +13,7 @@ gem 'sidekiq'
 gem 'sdoc', group: :doc
 gem 'uglifier', '>= 1.3.0'
 gem 'twilio-ruby'
+gem 'whenever', :require => false
 
 group :production do
   gem 'rails_12factor'
