@@ -13,7 +13,7 @@ gem 'sidekiq'
 gem 'sdoc', group: :doc
 gem 'uglifier', '>= 1.3.0'
 gem 'twilio-ruby'
-gem 'whenever', :require => false
+gem 'whenever'
 
 group :production do
   gem 'rails_12factor'
@@ -22,6 +22,8 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'pry-rails'
   gem 'quiet_assets'
   gem 'spring'
@@ -30,7 +32,7 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'factory_girl_rails', require: false
+  gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
 end
