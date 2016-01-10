@@ -11,7 +11,7 @@ class Text
       person.update_zip(text)
       get_hourly_forecast_data
     else
-      "Please input a valid zipcode in the form 12345 or 12345-1234"
+      'Please input a valid zipcode in the form 12345 or 12345-1234'
     end
   end
 
