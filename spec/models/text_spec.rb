@@ -22,10 +22,7 @@ describe Text do
         end
 
         it 'returns hourly data' do
-          subject
-          expect(subject).to include(':')
-          expect(subject).to include('°')
-          expect(subject).to include('%')
+          expect(subject).to include(':', '°', '%')
         end
       end
 
@@ -45,10 +42,7 @@ describe Text do
         end
 
         it 'returns hourly data' do
-          subject
-          expect(subject).to include(':')
-          expect(subject).to include('°')
-          expect(subject).to include('%')
+          expect(subject).to include(':', '°', '%')
         end
       end
     end
