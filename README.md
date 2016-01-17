@@ -2,7 +2,7 @@
 
 This is a work in progress and is not production ready.
 
-If a user sends a text to RainCheck with their zipcode, they will recieve a reply with the hourly weather report for the next 10 hours.
+Currently, if a user sends a text to RainCheck with their zipcode, they will recieve a reply with the hourly weather report for the next 12 hours.
 
 Example Response:
 

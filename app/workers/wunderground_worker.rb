@@ -2,10 +2,10 @@ class WundergroundWorker
   include Sidekiq::Worker
 
   def perform
-    Person.all.each do |p|
-      # if person time_zone = current time
-        # then send text
-    end
+    # Person.all.each do |p|
+    #   if person time_zone = current time
+    #     then send text
+    # end
   end
 
   def send_hourly_forecast(person_id)

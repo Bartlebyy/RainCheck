@@ -5,20 +5,20 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+# set :output, '/path/to/my/cron_log.log'
 #
 # every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
+#   command '/usr/bin/some_great_command'
+#   runner 'MyModel.some_method'
+#   rake 'some:great:rake:task'
 # end
 #
 # every 4.days do
-#   runner "AnotherModel.prune_old_records"
+#   runner 'AnotherModel.prune_old_records'
 # end
 
 # Learn more: http://github.com/javan/whenever
 
- every 1.hour do
-  runner "WundergroundWorker.perform_async"
+every 1.hour do
+  runner 'WundergroundWorker.perform_async'
 end

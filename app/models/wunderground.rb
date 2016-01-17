@@ -4,7 +4,7 @@ class Wunderground
 
   attr_reader :zipcode
 
-  def initialize zipcode
+  def initialize(zipcode)
     @zipcode = zipcode
   end
 
@@ -14,7 +14,7 @@ class Wunderground
 
   private
 
-  def report hourly_forecast, num_of_hours = 12
+  def report(hourly_forecast, num_of_hours = 12)
     final_report = ['']
 
     (0...num_of_hours).map do |n|
@@ -25,12 +25,12 @@ class Wunderground
       rain = (data['pop'] + '%')
       condition = data['icon']
 
-      final_report << "#{ meridian_hour }: #{ temp } #{ rain } #{ condition }"
+      final_report << "#{meridian_hour}: #{temp} #{rain} #{condition}"
     end
     final_report.join('\n')
   end
 
-  def convert_to_meridian military_hour
+  def convert_to_meridian(military_hour)
     if military_hour == 0
       '12'
     elsif military_hour <= 12
@@ -49,6 +49,6 @@ class Wunderground
   end
 
   def url
-    "http://api.wunderground.com/api/#{ ENV['WUNDERGROUND_KEY'] }/hourly/q/#{ zipcode }.json"
+    "http://api.wunderground.com/api/#{ENV['WUNDERGROUND_KEY']}/hourly/q/#{zipcode}.json"
   end
 end

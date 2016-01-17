@@ -1,0 +1,15 @@
+# Gradual enforcement
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Include:
+    - 'config.ru'
+    - 'Gemfile'
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'spec/fixtures/wunderground_hourly_data.rb'
+
+Documentation:
+  Enabled: false

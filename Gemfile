@@ -24,8 +24,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'pry-byebug'
-  gem 'pry-rails'
+  gem 'guard-rubocop'
   gem 'quiet_assets'
   gem 'spring'
   gem 'spring-commands-rspec'
@@ -35,7 +34,10 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'rubocop', require: false
 end
 
 group :test do
