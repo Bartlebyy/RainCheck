@@ -1,8 +1,10 @@
-# RainCheck
+# RainCheck 🌧️
 
-This is a work in progress and is not production ready.
+This is a text messaging app that will text you the hourly weather. 
 
-Currently, if a user sends a text to RainCheck with their zipcode, they will receive a reply with the hourly weather report for the next 12 hours.
+All you have to do is text it your zip code and it'll start giving you hourly weather updates daily.
+
+This was a side project to get me familiar with Twilio, as well as give me the hourly weather data I needed in the morning. 
 
 Example Response:
 
